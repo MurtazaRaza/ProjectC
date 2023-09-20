@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Events
+namespace GameEvents
 {
     public static class BroadcastSystem
     {
-        public static UnityAction<int> CardSelected;
+        public static UnityAction<Card> CardSelected;
         public static UnityAction<Vector2Int> BoardPieceFilled;
 
         public static UnityAction<GameState> GameStateChanged;
