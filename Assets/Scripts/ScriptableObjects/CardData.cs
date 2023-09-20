@@ -6,12 +6,7 @@ using UnityEngine.AddressableAssets;
 [CreateAssetMenu(fileName = "NewCard", menuName = "Card/New", order = 1)]
 public class CardData : ScriptableObject
 {
-    [SerializeField]
-    private int id;
-
-    [SerializeField] 
-    private string cardName;
-
-    [SerializeField] 
-    private AssetReferenceT<Sprite> imageSpriteSoftReference;
+    public int id;
+    public string cardName;
+    public AssetReferenceSprite imageSpriteSoftReference;
 }
