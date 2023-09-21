@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class StateSerializer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private const string PLAYER_PREFS_KEY = "";
+    public static void SaveStringToFile(string data)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public static string RetrieveStringFromFile()
     {
-        
+        return null;
     }
 }
+
+
