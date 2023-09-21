@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,25 +35,55 @@ public class Card : MonoBehaviour
 
     private void OnEnable()
     {
-        _interactor.MouseUp += OnCardTapped;
+        _interactor.MouseDown += OnCardTapped;
     }
 
     private void OnDisable()
     {
-        _interactor.MouseUp -= OnCardTapped;
+        _interactor.MouseDown -= OnCardTapped;
     }
-
-
+    
     public void PopulateCard(CardData cardData)
     {
         _cardData = cardData;
-        UpdateCardUi();
+        //UpdateCardUi();
     }
-    
+
+    public void MatchCardSuccess()
+    {
+        // Play Success Animation 
+        // Play Matching Sound
+        
+        // Lerp card to score or smth
+
+        gameObject.SetActive(false);
+    }
+
+    public void MatchCardFailure()
+    {
+        // Play Not Matching Sound
+        // UnFlipCard
+
+        FlipCard(false);
+    }
     
     private void OnCardTapped()
     {
+        if(_isFlipped)
+            return;
+        
         BroadcastSystem.CardSelected?.Invoke(this);
+
+        FlipCard(true);
+    }
+
+    private void FlipCard(bool val)
+    {
+        // Add proper flipping animation here
+
+        _isFlipped = val;
+        cardBack.gameObject.SetActive(!_isFlipped);
+        cardFront.gameObject.SetActive(_isFlipped);
     }
 
     private async void UpdateCardUi()

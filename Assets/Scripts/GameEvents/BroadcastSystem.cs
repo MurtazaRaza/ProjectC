@@ -9,6 +9,7 @@ namespace GameEvents
         public static UnityAction<Vector2Int> BoardPieceFilled;
 
         public static UnityAction<GameState> GameStateChanged;
+        public static UnityAction<bool> CanInput;
         public static UnityAction PlayerWon;
         public static UnityAction RestartGame;
     }
