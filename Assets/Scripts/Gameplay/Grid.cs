@@ -22,8 +22,7 @@ public class Grid : MonoBehaviour
     private Card cardPrefab;
 
     private List<Card> _cardGameObjects = new List<Card>();
-
-
+    
     public void InitializeGrid(int numberOfCards, int numberOfCardsToSelect)
     {
         SetupGridLayout(numberOfCards);
@@ -37,6 +36,7 @@ public class Grid : MonoBehaviour
             {
                 var card = Instantiate(cardPrefab.gameObject, gridLayoutGroup.transform).GetComponent<Card>();
                 card.PopulateCard(listSubsection[n]);
+                card.gameObject.name = card.CardData.cardName;
                 _cardGameObjects.Add(card);
             }
             

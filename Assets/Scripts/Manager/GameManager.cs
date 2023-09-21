@@ -84,6 +84,13 @@ public class GameManager : UnitySingleton<GameManager>
             MarkAsIncorrect();
             StartCoroutine(ResetTurn());
         }
+
+        CheckGameOver();
+    }
+
+    private void CheckGameOver()
+    {
+        throw new NotImplementedException();
     }
 
     private void MarkAsCorrect()
@@ -92,6 +99,8 @@ public class GameManager : UnitySingleton<GameManager>
         {
             card.MatchCardSuccess();
         }
+        
+        _currentTurnSelectedCards.Clear();
 
         Scorer.Instance.Scored(true);
     }
@@ -103,16 +112,19 @@ public class GameManager : UnitySingleton<GameManager>
             card.MatchCardFailure();
         }
         
+        _currentTurnSelectedCards.Clear();
+        
         Scorer.Instance.Scored(false);
     }
     
     private IEnumerator ResetTurn()
     {
         BroadcastSystem.CanInput?.Invoke(false);
-        _currentTurnSelectedCards.Clear();
         yield return new WaitForSeconds(1f);
 
+        BroadcastSystem.UnFlipAllCards?.Invoke();
         BroadcastSystem.CanInput?.Invoke(true);
+        
     }
 }
 
