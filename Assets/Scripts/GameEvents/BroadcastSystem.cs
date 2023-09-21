@@ -10,6 +10,7 @@ namespace GameEvents
 
         public static UnityAction<GameState> GameStateChanged;
         public static UnityAction<bool> CanInput;
+        public static UnityAction UnFlipAllCards;
         public static UnityAction PlayerWon;
         public static UnityAction RestartGame;
     }

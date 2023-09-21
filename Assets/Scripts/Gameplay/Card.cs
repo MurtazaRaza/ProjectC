@@ -25,6 +25,8 @@ public class Card : MonoBehaviour
     public CardData CardData => _cardData;
     
     private bool _isFlipped;
+    private bool _isFlipping;
+    private bool _isComplete;
     private CardData _cardData;
     
 
@@ -36,11 +38,13 @@ public class Card : MonoBehaviour
     private void OnEnable()
     {
         _interactor.MouseDown += OnCardTapped;
+        BroadcastSystem.UnFlipAllCards += UnFlipCard;
     }
 
     private void OnDisable()
     {
         _interactor.MouseDown -= OnCardTapped;
+        BroadcastSystem.UnFlipAllCards -= UnFlipCard;
     }
     
     public void PopulateCard(CardData cardData)
@@ -51,6 +55,7 @@ public class Card : MonoBehaviour
 
     public void MatchCardSuccess()
     {
+        _isComplete = true;
         // Play Success Animation 
         // Play Matching Sound
         
@@ -79,11 +84,27 @@ public class Card : MonoBehaviour
 
     private void FlipCard(bool val)
     {
-        // Add proper flipping animation here
+        if(_isFlipping)
+            return;
 
+        _isFlipping = true;
         _isFlipped = val;
-        cardBack.gameObject.SetActive(!_isFlipped);
-        cardFront.gameObject.SetActive(_isFlipped);
+
+        transform.DOLocalRotate(new Vector3(0, 90, 0), 0.5f, RotateMode.FastBeyond360).SetRelative(true)
+            .SetEase(Ease.InOutCubic).onComplete += () =>
+        {
+            cardBack.gameObject.SetActive(!_isFlipped);
+            cardFront.gameObject.SetActive(_isFlipped);
+            
+            transform.DOLocalRotate(new Vector3(0, 90, 0), 0.3f, RotateMode.Fast).SetRelative(true)
+                .SetEase(Ease.OutFlash);
+            _isFlipping = false;
+        };
+    }
+    
+    private void UnFlipCard()
+    {
+        FlipCard(false);
     }
 
     private async void UpdateCardUi()
