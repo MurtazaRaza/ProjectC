@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3934623321376100318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8191579505221996035}
+  - component: {fileID: 6656510190277534061}
+  - component: {fileID: 4998753768536933232}
+  m_Layer: 5
+  m_Name: Grid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8191579505221996035
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934623321376100318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 147, y: 0}
+  m_SizeDelta: {x: -620.0001, y: -19.492065}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6656510190277534061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934623321376100318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 200, y: 180}
+  m_Spacing: {x: 20, y: 20}
+  m_Constraint: 2
+  m_ConstraintCount: 5
+--- !u!114 &4998753768536933232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934623321376100318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872445bfbb59f45cd9a551023c771a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridLayoutGroup: {fileID: 6656510190277534061}
+  gridDatas:
+  - {fileID: 11400000, guid: d402b2e2b63454cf1b5de4ed39ee92ec, type: 2}
+  - {fileID: 11400000, guid: 369efaa1ac21a4c318f871c6adf782f2, type: 2}
+  - {fileID: 11400000, guid: 91c699f2e49574ce6a91dda15ae9dd73, type: 2}
+  - {fileID: 11400000, guid: 41dc460ab7f6a4ebcbf892dd2e5dd891, type: 2}
+  - {fileID: 11400000, guid: 9d660892fa9994f3387fa91aaf55dcc5, type: 2}
+  CardDatas:
+  - {fileID: 11400000, guid: bde58e2ac4c5540b4abca55fa45ed48d, type: 2}
+  - {fileID: 11400000, guid: 8397b11ed381e4374960a276d64d3722, type: 2}
+  - {fileID: 11400000, guid: 3ca444c9efa43432687f44271a76a4c1, type: 2}
+  - {fileID: 11400000, guid: ad7f010cae82b40b588e4fb905c4c8b4, type: 2}
+  - {fileID: 11400000, guid: 8ac5b1babe55242768d3a3f6c4ca5e9d, type: 2}
+  - {fileID: 11400000, guid: 8ca1ce4a2452147a685ff695a23d8b84, type: 2}
+  - {fileID: 11400000, guid: 8e2ab51d861df447c845570335ed699d, type: 2}
+  - {fileID: 11400000, guid: 88ca033d822e147fbbe066a7a2242d81, type: 2}
+  - {fileID: 11400000, guid: 1f3f099170da64a24bf273ae4dd48a22, type: 2}
+  - {fileID: 11400000, guid: 9971d5f4a266c4dcc8dbc445c794a83d, type: 2}
+  - {fileID: 11400000, guid: e341af5ce26b3448abef3b440a4e9aec, type: 2}
+  - {fileID: 11400000, guid: a8c7e90bf7b8b4bca9d390ef494a6cc2, type: 2}
+  - {fileID: 11400000, guid: c663ee35627d3464f83e0c3a57269521, type: 2}
+  - {fileID: 11400000, guid: cc0837353ff0642af8718435d6220877, type: 2}
+  - {fileID: 11400000, guid: a9e39b36dc770468c98eda87412666f3, type: 2}
+  cardPrefab: {fileID: 9171501956842548367, guid: 29510bf88a7774908a269d20d15c516f, type: 3}
