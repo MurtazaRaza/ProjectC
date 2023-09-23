@@ -104,7 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8069535ba9c4413a3f63a7f2056c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteGetter: {fileID: 6619673198064323079}
   cardFront: {fileID: 4700919895650667051}
+  cardFrontCharacterAnimator: {fileID: 262567478229401394}
   cardFrontImage: {fileID: 6534577429582505140}
   cardBack: {fileID: 4255666114999541161}
 --- !u!1 &4255666114999541161
@@ -270,7 +272,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8463382511400352367}
   - component: {fileID: 7346058011728303007}
+  - component: {fileID: 6619673198064323079}
   - component: {fileID: 6534577429582505140}
+  - component: {fileID: 262567478229401394}
   m_Layer: 5
   m_Name: CardCharacter
   m_TagString: Untagged
@@ -306,6 +310,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5811188493053710852}
   m_CullTransparentMesh: 1
+--- !u!114 &6619673198064323079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811188493053710852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d91e93ca307492cb61e0a0318005e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 6534577429582505140}
 --- !u!114 &6534577429582505140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +353,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &262567478229401394
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811188493053710852}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7fc818dcae9a74d57b1ae686c6e87cbe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8484041043651073758
 GameObject:
   m_ObjectHideFlags: 0

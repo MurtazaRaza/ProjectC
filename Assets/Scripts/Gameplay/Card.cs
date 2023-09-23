@@ -10,9 +10,14 @@ using Utils;
 [RequireComponent(typeof(Interactor))]
 public class Card : MonoBehaviour
 {
+    [SerializeField] 
+    private SpriteGetter spriteGetter;
 
     [SerializeField] 
     private GameObject cardFront;
+
+    [SerializeField] 
+    private Animator cardFrontCharacterAnimator;
 
     [SerializeField]
     private Image cardFrontImage;
@@ -30,6 +35,13 @@ public class Card : MonoBehaviour
     private bool _isFlipping;
     private bool _isComplete;
     private CardData _cardData;
+
+    // Animation Related
+    private readonly int _animatorSuccessParameter = Animator.StringToHash("Success");
+    private readonly int _animatorFailureParameter = Animator.StringToHash("Failure");
+    private readonly int _animatorSearchingParameter = Animator.StringToHash("Searching");
+    private float halfFlipSpeed = 0.5f;
+    private float secondHalfFlipSpeed = 0.3f;
     
 
     private void Awake()
@@ -57,7 +69,8 @@ public class Card : MonoBehaviour
         
         if(_isComplete)
             UpdateCardDisplayAsCompleted();
-        //UpdateCardUi();
+        
+        PopulateCardDisplay();
     }
 
     public void MatchCardSuccess()
@@ -72,6 +85,7 @@ public class Card : MonoBehaviour
 
     private IEnumerator MatchCardSuccessRoutine()
     {
+        cardFrontCharacterAnimator.SetBool(_animatorSuccessParameter, true);
         yield return new WaitForSeconds(1f);
         
         UpdateCardDisplayAsCompleted();
@@ -93,7 +107,8 @@ public class Card : MonoBehaviour
 
     private IEnumerator MatchCardFailureRoutine()
     {
-        yield return new WaitForSeconds(0.3f);
+        cardFrontCharacterAnimator.SetTrigger(_animatorFailureParameter);
+        yield return new WaitForSeconds(0.5f);
     }
     
     private void OnCardTapped()
@@ -112,13 +127,13 @@ public class Card : MonoBehaviour
         _isFlipping = true;
         _isFlipped = val;
 
-        transform.DOLocalRotate(new Vector3(0, 90, 0), 0.5f, RotateMode.FastBeyond360).SetRelative(true)
+        transform.DOLocalRotate(new Vector3(0, 90, 0), halfFlipSpeed, RotateMode.FastBeyond360).SetRelative(true)
             .SetEase(Ease.InOutCubic).onComplete += () =>
         {
             cardBack.gameObject.SetActive(!_isFlipped);
             cardFront.gameObject.SetActive(_isFlipped);
             
-            transform.DOLocalRotate(new Vector3(0, 90, 0), 0.3f, RotateMode.Fast).SetRelative(true)
+            transform.DOLocalRotate(new Vector3(0, 90, 0), secondHalfFlipSpeed, RotateMode.Fast).SetRelative(true)
                 .SetEase(Ease.OutFlash);
             _isFlipping = false;
             
@@ -130,16 +145,22 @@ public class Card : MonoBehaviour
     {
         if(_isComplete)
             return;
+        cardFrontCharacterAnimator.SetTrigger(_animatorSearchingParameter);
         
         if(_isFlipped)
             FlipCard(false);
     }
 
-    private async void PopulateCardDisplay()
+    private void PopulateCardDisplay()
     {
-        cardFrontImage.sprite = await AssetLoaderUtil.LoadSpriteAsync(_cardData.imageSpriteSoftReference) ??
-                                Sprite.Create(Texture2D.whiteTexture,
-                                    new Rect(0.0f, 0.0f, Texture2D.whiteTexture.width, Texture2D.whiteTexture.height),
-                                    new Vector2(0.5f, 0.5f), 100.0f);
+        spriteGetter.LoadSpritesIntoDictionary(_cardData.spriteSheetResourcePath);
+        cardFrontImage.sprite = spriteGetter.GetSprite(0) ?? Sprite.Create(Texture2D.whiteTexture,
+            new Rect(0.0f, 0.0f, Texture2D.whiteTexture.width, Texture2D.whiteTexture.height), new Vector2(0.5f, 0.5f),
+            100.0f);
+
+        // cardFrontImage.sprite = await AssetLoaderUtil.LoadSpriteAsync(_cardData.imageSpriteSoftReference) ??
+        //                         Sprite.Create(Texture2D.whiteTexture,
+        //                             new Rect(0.0f, 0.0f, Texture2D.whiteTexture.width, Texture2D.whiteTexture.height),
+        //                             new Vector2(0.5f, 0.5f), 100.0f);
     }
 }
