@@ -23,6 +23,8 @@ public class Card : MonoBehaviour
     private Interactor _interactor;
 
     public CardData CardData => _cardData;
+    public bool IsFlipped => _isFlipped;
+    public bool IsComplete => _isComplete;
     
     private bool _isFlipped;
     private bool _isFlipping;
@@ -50,6 +52,11 @@ public class Card : MonoBehaviour
     public void PopulateCard(CardData cardData)
     {
         _cardData = cardData;
+        if(_isFlipped)
+            FlipCard(true);
+        
+        if(_isComplete)
+            UpdateCardDisplayAsCompleted();
         //UpdateCardUi();
     }
 
@@ -60,8 +67,20 @@ public class Card : MonoBehaviour
         // Play Matching Sound
         
         // Lerp card to score or smth
+        StartCoroutine(MatchCardSuccessRoutine());
+    }
 
-        gameObject.SetActive(false);
+    private IEnumerator MatchCardSuccessRoutine()
+    {
+        yield return new WaitForSeconds(1f);
+        
+        UpdateCardDisplayAsCompleted();
+    }
+
+    public void UpdateCardDisplayAsCompleted()
+    {
+        cardFront.SetActive(false);
+        cardBack.SetActive(false);
     }
 
     public void MatchCardFailure()
@@ -69,7 +88,12 @@ public class Card : MonoBehaviour
         // Play Not Matching Sound
         // UnFlipCard
 
-        FlipCard(false);
+        StartCoroutine(MatchCardFailureRoutine());
+    }
+
+    private IEnumerator MatchCardFailureRoutine()
+    {
+        yield return new WaitForSeconds(0.3f);
     }
     
     private void OnCardTapped()
@@ -77,12 +101,10 @@ public class Card : MonoBehaviour
         if(_isFlipped)
             return;
         
-        BroadcastSystem.CardSelected?.Invoke(this);
-
         FlipCard(true);
     }
 
-    private void FlipCard(bool val)
+    public void FlipCard(bool val)
     {
         if(_isFlipping)
             return;
@@ -99,15 +121,21 @@ public class Card : MonoBehaviour
             transform.DOLocalRotate(new Vector3(0, 90, 0), 0.3f, RotateMode.Fast).SetRelative(true)
                 .SetEase(Ease.OutFlash);
             _isFlipping = false;
+            
+            BroadcastSystem.CardSelected?.Invoke(this);
         };
     }
     
     private void UnFlipCard()
     {
-        FlipCard(false);
+        if(_isComplete)
+            return;
+        
+        if(_isFlipped)
+            FlipCard(false);
     }
 
-    private async void UpdateCardUi()
+    private async void PopulateCardDisplay()
     {
         cardFrontImage.sprite = await AssetLoaderUtil.LoadSpriteAsync(_cardData.imageSpriteSoftReference) ??
                                 Sprite.Create(Texture2D.whiteTexture,

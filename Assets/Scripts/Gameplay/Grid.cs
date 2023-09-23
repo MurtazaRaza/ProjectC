@@ -34,7 +34,7 @@ public class Grid : MonoBehaviour
         {
             for (int n = 0; n < listSubsection.Count; n++)
             {
-                var card = Instantiate(cardPrefab.gameObject, gridLayoutGroup.transform).GetComponent<Card>();
+                Card card = Instantiate(cardPrefab.gameObject, gridLayoutGroup.transform).GetComponent<Card>();
                 card.PopulateCard(listSubsection[n]);
                 card.gameObject.name = card.CardData.cardName;
                 _cardGameObjects.Add(card);
@@ -66,13 +66,6 @@ public class Grid : MonoBehaviour
         gridLayoutGroup.spacing = gridData.spacing;
     }
 
-    // TODO add deserialized parameters to initialize grid from saved values
-    public void ReInitializeGrid()
-    {
-
-        throw new NotImplementedException();
-    }
-
     private GridData GetGridDataAccordingToNumberOfCards(int numberOfCards)
     {
         GridData gridDataToUse = gridDatas[0];
@@ -87,5 +80,46 @@ public class Grid : MonoBehaviour
         }
 
         throw new Exception("Number of cards greater than what is supported");
+    }
+    
+    public void ReInitializeGrid(CardGameStateSerialized cardGameStateSerialized)
+    {
+        SetupGridLayout(cardGameStateSerialized.numberOfCards);
+        List<CardData> cardDataFromSerializedData = new List<CardData>();
+
+        foreach (var cardSerialized in cardGameStateSerialized.cardGrid)
+        {
+            CardData cardData = CardDatas.Find(card => card.id.Equals(cardSerialized.cardId));
+            cardDataFromSerializedData.Add(cardData);
+            
+            Card card = Instantiate(cardPrefab.gameObject, gridLayoutGroup.transform).GetComponent<Card>();
+            card.PopulateCard(cardData);
+            card.gameObject.name = card.CardData.cardName;
+            
+            if(cardSerialized.isComplete)
+                card.UpdateCardDisplayAsCompleted();
+
+            if(cardSerialized.isFlipped)
+                card.FlipCard(true);
+            
+            _cardGameObjects.Add(card);
+        }
+    }
+
+    public List<CardSerialized> SerializeGrid()
+    {
+        List<CardSerialized> allCardsSerialized = new List<CardSerialized>();
+        foreach (var cardGameObject in _cardGameObjects)
+        {
+            CardSerialized cardSerialized;
+
+            cardSerialized.cardId = cardGameObject.CardData.id;
+            cardSerialized.isFlipped = cardGameObject.IsFlipped;
+            cardSerialized.isComplete = cardGameObject.IsComplete;
+
+            allCardsSerialized.Add(cardSerialized);
+        }
+
+        return allCardsSerialized;
     }
 }

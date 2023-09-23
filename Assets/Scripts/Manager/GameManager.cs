@@ -35,13 +35,17 @@ public class GameManager : UnitySingleton<GameManager>
             Debug.LogError("No level data assigned");
             return;
         }
-        
+
         // Set Rules
         _numberOfCardsToMatch = currentLevelData.numberOfCardsToSelect;
         _totalNumberOfCards = currentLevelData.totalNumberOfCards;
         Scorer.Instance.SetScoreRules(currentLevelData.perSuccessPoint, true);
         
         // Check whether we resumed this level and set isReume
+        var cardGameStateSerialized = StateSerializer.RetrieveState();
+
+        _isResume = StateSerializer.HasSavedState() &&
+                    (cardGameStateSerialized.levelNumber == currentLevelData.levelNumber);
 
         // Initialize the grid
         if (!_isResume)
@@ -50,18 +54,25 @@ public class GameManager : UnitySingleton<GameManager>
         }
         else
         {
-            grid.ReInitializeGrid();
+            // override rules
+            _numberOfCardsToMatch = cardGameStateSerialized.numberOfCardsToSelect;
+            _totalNumberOfCards = cardGameStateSerialized.numberOfCards;
+            Scorer.Instance.SetScoreRules(cardGameStateSerialized.perSuccessPoint);
+
+            grid.ReInitializeGrid(cardGameStateSerialized);
         }
     }
 
     private void OnEnable()
     {
         BroadcastSystem.CardSelected += OnCardSelected;
+        BroadcastSystem.OnBackToMainMenu += OnBackToMainMenu;
     }
 
     private void OnDisable()
     {
         BroadcastSystem.CardSelected -= OnCardSelected;
+        BroadcastSystem.OnBackToMainMenu -= OnBackToMainMenu;
     }
     
     
@@ -90,7 +101,7 @@ public class GameManager : UnitySingleton<GameManager>
 
     private void CheckGameOver()
     {
-        throw new NotImplementedException();
+        // throw new NotImplementedException();
     }
 
     private void MarkAsCorrect()
@@ -125,6 +136,28 @@ public class GameManager : UnitySingleton<GameManager>
         BroadcastSystem.UnFlipAllCards?.Invoke();
         BroadcastSystem.CanInput?.Invoke(true);
         
+    }
+    
+    
+    private void OnBackToMainMenu()
+    {
+        if(_currentGameState == GameState.GameRunning)
+            SerializeCardGameState();
+    }
+
+    private void SerializeCardGameState()
+    {
+        List<CardSerialized> cardsSerialized = grid.SerializeGrid();
+        StateSerializer.SaveState(new CardGameStateSerialized()
+        {
+            cardGrid = cardsSerialized,
+            levelNumber = currentLevelData.levelNumber,
+            numberOfCards = _totalNumberOfCards,
+            numberOfCardsToSelect = _numberOfCardsToMatch,
+            score = Scorer.Instance.Score,
+            combo = Scorer.Instance.ComboStreak,
+            perSuccessPoint = Scorer.Instance.PerSuccessPoint
+        });
     }
 }
 

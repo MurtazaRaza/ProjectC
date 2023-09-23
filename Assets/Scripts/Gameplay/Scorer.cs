@@ -7,9 +7,13 @@ public class Scorer : UnitySingleton<Scorer>
 {
     [SerializeField] 
     private UiManager uiManager;
+
+    public int Score => _score;
+    public int ComboStreak => _comboStreak;
+    public int PerSuccessPoint => _perSuccessPoint;
     
     private int _comboStreak = 0;
-    private int _perSuccessPoint;
+    private int _perSuccessPoint = 1;
     private bool _hasComboMultiplier;
 
     private int _score;

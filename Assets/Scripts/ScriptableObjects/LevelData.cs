@@ -7,7 +7,6 @@ public class LevelData : ScriptableObject
 {
     public int levelNumber;
     public int numberOfCardsToSelect;
-    public int numberOfRows;
     public int totalNumberOfCards;
     public int perSuccessPoint = 1;
 
@@ -16,7 +15,6 @@ public class LevelData : ScriptableObject
     {
         this.levelNumber = levelData.levelNumber;
         this.numberOfCardsToSelect = levelData.numberOfCardsToSelect;
-        this.numberOfRows = levelData.numberOfRows;
         this.totalNumberOfCards = levelData.totalNumberOfCards;
         this.perSuccessPoint = levelData.perSuccessPoint;
     }
