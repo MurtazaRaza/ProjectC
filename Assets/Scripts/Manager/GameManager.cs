@@ -40,12 +40,13 @@ public class GameManager : UnitySingleton<GameManager>
         _numberOfCardsToMatch = currentLevelData.numberOfCardsToSelect;
         _totalNumberOfCards = currentLevelData.totalNumberOfCards;
         Scorer.Instance.SetScoreRules(currentLevelData.perSuccessPoint, true);
-        
-        // Check whether we resumed this level and set isReume
-        var cardGameStateSerialized = StateSerializer.RetrieveState();
 
-        _isResume = StateSerializer.HasSavedState() &&
-                    (cardGameStateSerialized.levelNumber == currentLevelData.levelNumber);
+
+
+        _isResume = StateSerializer.HasSavedState();
+        // Check whether we resumed this level and set isResume
+        var cardGameStateSerialized = StateSerializer.RetrieveState();
+        _isResume = _isResume && cardGameStateSerialized.levelNumber == currentLevelData.levelNumber;
 
         // Initialize the grid
         if (!_isResume)
@@ -58,6 +59,7 @@ public class GameManager : UnitySingleton<GameManager>
             _numberOfCardsToMatch = cardGameStateSerialized.numberOfCardsToSelect;
             _totalNumberOfCards = cardGameStateSerialized.numberOfCards;
             Scorer.Instance.SetScoreRules(cardGameStateSerialized.perSuccessPoint);
+            Scorer.Instance.SetScoreFromState(cardGameStateSerialized.score, cardGameStateSerialized.combo);
 
             grid.ReInitializeGrid(cardGameStateSerialized);
         }
@@ -101,7 +103,15 @@ public class GameManager : UnitySingleton<GameManager>
 
     private void CheckGameOver()
     {
-        // throw new NotImplementedException();
+        if (grid.AreAllCardsComplete())
+        {
+            // End Game
+            _currentGameState = GameState.GameEnded;
+            uiManager.DisplayEndGameUi();
+            if (StateSerializer.GetNumberOfLevelsCompleted() < currentLevelData.levelNumber)
+                StateSerializer.SetLevelCompleted(currentLevelData.levelNumber);
+
+        }
     }
 
     private void MarkAsCorrect()
@@ -131,7 +141,7 @@ public class GameManager : UnitySingleton<GameManager>
     private IEnumerator ResetTurn()
     {
         BroadcastSystem.CanInput?.Invoke(false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.75f);
 
         BroadcastSystem.UnFlipAllCards?.Invoke();
         BroadcastSystem.CanInput?.Invoke(true);

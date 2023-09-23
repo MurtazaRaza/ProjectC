@@ -42,8 +42,16 @@ public static class StateSerializer
     public static CardGameStateSerialized RetrieveState()
     {
         string data = RetrieveStringFromFile();
-        CardGameStateSerialized cardGameStateSerialized = JsonUtility.FromJson<CardGameStateSerialized>(data);
-
+        CardGameStateSerialized cardGameStateSerialized = new CardGameStateSerialized();
+        try
+        {
+            cardGameStateSerialized = JsonUtility.FromJson<CardGameStateSerialized>(data);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Error parsing json");
+        }
+        
         return cardGameStateSerialized;
     }
     

@@ -22,6 +22,12 @@ public class Scorer : UnitySingleton<Scorer>
     {
         _perSuccessPoint = perSuccessPoint;
     }
+
+    public void SetScoreFromState(int score, int combo)
+    {
+        _score = score;
+        _comboStreak = combo;
+    }
     
     public void Scored(bool val)
     {

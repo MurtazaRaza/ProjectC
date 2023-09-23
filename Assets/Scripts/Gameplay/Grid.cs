@@ -122,4 +122,15 @@ public class Grid : MonoBehaviour
 
         return allCardsSerialized;
     }
+
+    public bool AreAllCardsComplete()
+    {
+        foreach (var card in _cardGameObjects)
+        {
+            if (!card.IsComplete)
+                return false;
+        }
+
+        return true;
+    }
 }
