@@ -1,0 +1,1149 @@
+fileFormatVersion: 2
+guid: 5e5d20492957046c1822d5442928f17e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AdventureGuy2_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1024
+        width: 134
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe999fd4ab444c228cec6cca63026eb
+      internalID: 857434416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1025
+        width: 163
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f77e6982d10405dbc4ca0518d644d7
+      internalID: 31856071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_2
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1026
+        width: 183
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93782a92eecb4971a748aee15019d5e
+      internalID: -2122294708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_3
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1024
+        width: 126
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f461dcb1cb54288aa8a6ac0ad4b3a8
+      internalID: 1005174961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_4
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1029
+        width: 190
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cc991feeb6a414bb0685c8fec678db
+      internalID: -802888172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_5
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1024
+        width: 139
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a70bbc0a0b1645a2ba41d00fc311bf3
+      internalID: 76190306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_6
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1024
+        width: 139
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf8839c64ba945f39a57fa53938113a
+      internalID: 420929323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_7
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1024
+        width: 157
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fc0697e182b4d3f853b218d730c173
+      internalID: 2057692025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_8
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 1030
+        width: 157
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cbad428caac4234ab7623acca29cc6
+      internalID: -1203585484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 768
+        width: 134
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b62b7baa3bab4501b0e6179f47b7b82
+      internalID: 1385898707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_10
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 769
+        width: 181
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3d81b3ef2aa4371b0d7d9535258c98
+      internalID: -1642556667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_11
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 768
+        width: 173
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b42286c456340468f9a0022f2af3b7
+      internalID: 1815412896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_12
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 768
+        width: 171
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59978d6bd8a6446e791b0719d3161d7a
+      internalID: -206015102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_13
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 768
+        width: 174
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ff090701850438dafbaebd74012b69
+      internalID: -646328905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_14
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 768
+        width: 180
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebedbc25846846ae91605bb5ba05398
+      internalID: 2056269770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_15
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 768
+        width: 113
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e880471066f8c40df8f554231e66f4a6
+      internalID: -466379662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_16
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 769
+        width: 147
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f284570e4aa41db9382144a9082c1d
+      internalID: 1370701871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_17
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 772
+        width: 148
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7d7dbfb162d49d281477082d570776
+      internalID: 1579433124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_18
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 512
+        width: 158
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb53829b4e5e4653a82d6092ac99d57
+      internalID: -814401740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_19
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 519
+        width: 171
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ba525865cf6432986b521bb2d20889
+      internalID: -917273876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 516
+        width: 148
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 877e7f5f298be4b7b85ee855fd8f8512
+      internalID: 1600855722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_21
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 512
+        width: 123
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb90e370d03045cfbaf371b328f8b05
+      internalID: -620040364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_22
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 512
+        width: 142
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dc794340aa346e69950ec96a0828d1
+      internalID: 130731093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_23
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 512
+        width: 114
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064bd361042974116981c7879ad62c6d
+      internalID: -1513924201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_24
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 512
+        width: 152
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba49b0598da2f4eaf863f5b4fc196aa7
+      internalID: 1152203131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_25
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 513
+        width: 167
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3708fb43d5a8d412e8932217767062b9
+      internalID: 1727389691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_26
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 523
+        width: 190
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798707f2733384f418fc37254408e91b
+      internalID: 56175309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_27
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 256
+        width: 170
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d99bbc837a944d089416b72b009431
+      internalID: 1970272376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_28
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 256
+        width: 162
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8037589bf52484706bdd907d89f4413b
+      internalID: -1979214655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_29
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 256
+        width: 185
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755e9d601eb2a48c097b9a4d2cd936cf
+      internalID: -1006134744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_30
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 256
+        width: 131
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a51b795d7a04fc29d407d90e4b583c
+      internalID: 397960987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_31
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 256
+        width: 183
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115ae5c2f95524c3cb2969b60fd0d335
+      internalID: 1100407774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_32
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 256
+        width: 119
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d627df41e35f6477fbc9ff24821d21f4
+      internalID: -1393394612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_33
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 266
+        width: 186
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ffb4d9351164c60871a88065613cc2
+      internalID: -378072517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_34
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 256
+        width: 186
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026516f44c32b4bccb562d7a91ec602f
+      internalID: 957235345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_35
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 272
+        width: 157
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed49e5cb922b481fa3baff0ff92e21f
+      internalID: -901122651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_36
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 2
+        width: 148
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385d1142209dd4f10a50913fc4d07396
+      internalID: 1498370817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_37
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 136
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8799fc019d814873971abecdcc0b013
+      internalID: 2074023045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_38
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 122
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a818da54283420baab5b6bf4a24bd0
+      internalID: -294251448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_39
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 130
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb08e9dfafbe9414d9c630a626e6692a
+      internalID: -764492641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_40
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 0
+        width: 149
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7082b9c592994d429a0df512e14c3ba
+      internalID: 232874094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_41
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 0
+        width: 138
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e970c8f4777f94f1e92b0bae5d3d6178
+      internalID: -563779822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_42
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 0
+        width: 122
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7cd44f701d941e1ad2e2340329801b
+      internalID: -337301119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_43
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 0
+        width: 133
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05915de4e4b17436ea2a648d36f349ce
+      internalID: 368677163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AdventureGuy2_44
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 41
+        width: 189
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa212f125f35f453da1d3754055f27a2
+      internalID: -229425954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AdventureGuy2_0: 857434416
+      AdventureGuy2_1: 31856071
+      AdventureGuy2_10: -1642556667
+      AdventureGuy2_11: 1815412896
+      AdventureGuy2_12: -206015102
+      AdventureGuy2_13: -646328905
+      AdventureGuy2_14: 2056269770
+      AdventureGuy2_15: -466379662
+      AdventureGuy2_16: 1370701871
+      AdventureGuy2_17: 1579433124
+      AdventureGuy2_18: -814401740
+      AdventureGuy2_19: -917273876
+      AdventureGuy2_2: -2122294708
+      AdventureGuy2_20: 1600855722
+      AdventureGuy2_21: -620040364
+      AdventureGuy2_22: 130731093
+      AdventureGuy2_23: -1513924201
+      AdventureGuy2_24: 1152203131
+      AdventureGuy2_25: 1727389691
+      AdventureGuy2_26: 56175309
+      AdventureGuy2_27: 1970272376
+      AdventureGuy2_28: -1979214655
+      AdventureGuy2_29: -1006134744
+      AdventureGuy2_3: 1005174961
+      AdventureGuy2_30: 397960987
+      AdventureGuy2_31: 1100407774
+      AdventureGuy2_32: -1393394612
+      AdventureGuy2_33: -378072517
+      AdventureGuy2_34: 957235345
+      AdventureGuy2_35: -901122651
+      AdventureGuy2_36: 1498370817
+      AdventureGuy2_37: 2074023045
+      AdventureGuy2_38: -294251448
+      AdventureGuy2_39: -764492641
+      AdventureGuy2_4: -802888172
+      AdventureGuy2_40: 232874094
+      AdventureGuy2_41: -563779822
+      AdventureGuy2_42: -337301119
+      AdventureGuy2_43: 368677163
+      AdventureGuy2_44: -229425954
+      AdventureGuy2_5: 76190306
+      AdventureGuy2_6: 420929323
+      AdventureGuy2_7: 2057692025
+      AdventureGuy2_8: -1203585484
+      AdventureGuy2_9: 1385898707
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
