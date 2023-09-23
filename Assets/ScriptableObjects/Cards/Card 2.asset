@@ -14,8 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   cardName: 2
-  imageSpriteSoftReference:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  spriteSheetResourcePath: Art/CardCharacters/Guy1
