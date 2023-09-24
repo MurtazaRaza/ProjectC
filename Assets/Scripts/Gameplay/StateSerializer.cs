@@ -12,7 +12,7 @@ public static class StateSerializer
 
     public static int GetNumberOfLevelsCompleted()
     {
-        return PlayerPrefs.GetInt(NUMBER_OF_LEVELS_COMPLETED, 1);
+        return PlayerPrefs.GetInt(NUMBER_OF_LEVELS_COMPLETED, 0);
     }
 
     public static void SetLevelCompleted(int val)

@@ -141,7 +141,8 @@ public class Card : MonoBehaviour
                 .SetEase(Ease.OutFlash);
             _isFlipping = false;
             
-            BroadcastSystem.CardSelected?.Invoke(this);
+            if(val)
+                BroadcastSystem.CardSelected?.Invoke(this);
         };
     }
     

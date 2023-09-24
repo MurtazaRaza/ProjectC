@@ -2,6 +2,7 @@ using System;
 using GameEvents;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -58,6 +59,7 @@ public class UiManager : MonoBehaviour
     void MoveToMainMenu()
     {
         BroadcastSystem.OnBackToMainMenu?.Invoke();
+        SceneManager.LoadScene("MainMenuScene");
     }
 
 }

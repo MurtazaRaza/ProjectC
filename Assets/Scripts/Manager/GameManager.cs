@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GameEvents;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Utils.AudioUtils;
 using Utils.BaseClasses;
 
@@ -158,6 +159,7 @@ public class GameManager : UnitySingleton<GameManager>
     {
         if(_currentGameState == GameState.GameRunning)
             SerializeCardGameState();
+        
     }
 
     private void SerializeCardGameState()
