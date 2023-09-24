@@ -6,6 +6,7 @@ using GameEvents;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
+using Utils.AudioUtils;
 
 [RequireComponent(typeof(Interactor))]
 public class Card : MonoBehaviour
@@ -126,6 +127,9 @@ public class Card : MonoBehaviour
 
         _isFlipping = true;
         _isFlipped = val;
+
+        if(val)
+            AudioManager.Play(AudioHolder.Instance.cardFlipAudio, true);
 
         transform.DOLocalRotate(new Vector3(0, 90, 0), halfFlipSpeed, RotateMode.FastBeyond360).SetRelative(true)
             .SetEase(Ease.InOutCubic).onComplete += () =>

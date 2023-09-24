@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GameEvents;
 using UnityEngine;
+using Utils.AudioUtils;
 using Utils.BaseClasses;
 
 public class GameManager : UnitySingleton<GameManager>
@@ -105,6 +106,8 @@ public class GameManager : UnitySingleton<GameManager>
     {
         if (grid.AreAllCardsComplete())
         {
+            AudioManager.Play(AudioHolder.Instance.gameComplete, true);
+            
             // End Game
             _currentGameState = GameState.GameEnded;
             uiManager.DisplayEndGameUi();
@@ -116,6 +119,7 @@ public class GameManager : UnitySingleton<GameManager>
 
     private void MarkAsCorrect()
     {
+        AudioManager.Play(AudioHolder.Instance.correctAudio);
         foreach (var card in _currentTurnSelectedCards)
         {
             card.MatchCardSuccess();
@@ -128,6 +132,7 @@ public class GameManager : UnitySingleton<GameManager>
 
     private void MarkAsIncorrect()
     {
+        AudioManager.Play(AudioHolder.Instance.incorrectAudio);
         foreach (var card in _currentTurnSelectedCards)
         {
             card.MatchCardFailure();
@@ -141,7 +146,7 @@ public class GameManager : UnitySingleton<GameManager>
     private IEnumerator ResetTurn()
     {
         BroadcastSystem.CanInput?.Invoke(false);
-        yield return new WaitForSeconds(1.75f);
+        yield return new WaitForSeconds(1.4f);
 
         BroadcastSystem.UnFlipAllCards?.Invoke();
         BroadcastSystem.CanInput?.Invoke(true);

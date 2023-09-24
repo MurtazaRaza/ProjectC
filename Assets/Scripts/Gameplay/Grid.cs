@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityUtilities;
+using Utils.AudioUtils;
 
 public class Grid : MonoBehaviour
 {
@@ -30,17 +31,26 @@ public class Grid : MonoBehaviour
         List<CardData> listSubsection = new List<CardData>();
         GetSubsectionOfShuffledListToPopulateWith(numberOfCards, numberOfCardsToSelect, ref listSubsection);
 
+        StartCoroutine(PlaceCards(numberOfCardsToSelect, listSubsection));
+    }
+
+    private IEnumerator PlaceCards(int numberOfCardsToSelect, List<CardData> cardDatas)
+    {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(0.1f);
         for (int i = 0; i < numberOfCardsToSelect; i++)
         {
-            for (int n = 0; n < listSubsection.Count; n++)
+            foreach (var cardData in cardDatas)
             {
                 Card card = Instantiate(cardPrefab.gameObject, gridLayoutGroup.transform).GetComponent<Card>();
-                card.PopulateCard(listSubsection[n]);
+                card.PopulateCard(cardData);
                 card.gameObject.name = card.CardData.cardName;
                 _cardGameObjects.Add(card);
+
+                AudioManager.Play(AudioHolder.Instance.cardPlaceAudio, true);
+                yield return waitForSeconds;
             }
-            
-            listSubsection.Shuffle();
+
+            cardDatas.Shuffle();
         }
     }
 

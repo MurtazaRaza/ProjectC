@@ -40,17 +40,6 @@ namespace Utils.AudioUtils
             MusicAudioSource.Play();
         }
 
-        // Update is called once per frame
-
-        void Update()
-        {
-            if (!MusicAudioSource.isPlaying && ActivatePlayListMode)
-            {
-                MusicAudioSource.clip = MusicPlayList[Random.Range(0, MusicPlayList.Length)];
-                MusicAudioSource.Play();
-            }
-        }
-
         #endregion
 
         #region SFX
